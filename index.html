@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Personnes</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+
+</head>
+<body>
+
+    <input type="text" id="search" placeholder="Rechercher (nom ou prénom)">
+    <table id="personTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Nom</th>
+                <th onclick="sortTable(1)">Prénom</th>
+                <th onclick="sortTable(2)">Email</th>
+                <th onclick="sortTable(3)">Rue</th>
+                <th onclick="sortTable(4)">Code Postal</th>
+                <th onclick="sortTable(5)">Ville</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h1>Ajouter quelqu'un</h1>
+    <form id="personForm">
+        <label>Nom:</label>
+        <input type="text" id="nom" required>
+        <div id="nomError" class="error"></div>
+
+        <label>Prénom:</label>
+        <input type="text" id="prenom" required>
+        <div id="prenomError" class="error"></div>
+
+        <label>Email:</label>
+        <input type="email" id="email" required>
+        <div id="emailError" class="error"></div>
+
+        <label>Rue:</label>
+        <input type="text" id="rue" required>
+
+        <label>Code Postal:</label>
+        <input type="text" id="codePostal" required>
+        <div id="codePostalError" class="error"></div>
+
+        <label>Ville:</label>
+        <input type="text" id="ville" required>
+        <div id="villeError" class="error"></div>
+
+        <button type="submit">Ajouter</button>
+    </form>
+
+
+
+</body>
+</html>
